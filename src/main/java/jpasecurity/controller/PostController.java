@@ -22,7 +22,7 @@ public class PostController {
         return postRepository.findAll();
     }
 
-    @GetMapping
+    @GetMapping("{id}")
     public Post findById(@PathVariable("id") Post post){
         return post;
     }

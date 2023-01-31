@@ -20,11 +20,10 @@ public class SecurityConfig {
                 .authorizeRequests(auth -> auth
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers("/api/posts/**").permitAll()
-                        .anyRequest().authenticated()
-                )
-                .userDetailsService()
+                        .anyRequest().authenticated())
+//                .userDetailsService()
                 .headers(headers -> headers.frameOptions().sameOrigin())
-                .httpBasic(Customizer.withDefaults())
+//                .httpBasic(Customizer.withDefaults())
                 .build();
     }
 

@@ -22,13 +22,10 @@ public class Post {
     public Post() {
     }
 
-    public Post(Long id,
-                String title,
+    public Post(String title,
                 String slug,
                 String content,
-                String author,
-                LocalDateTime publishedOn,
-                LocalDateTime updatedOn) {
+                String author) {
         this.id = id;
         this.title = title;
         this.slug = slug;
